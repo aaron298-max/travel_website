@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact • Wanderly Travels</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav container">
+            <a class="logo" href="index.html">Wanderly<span>Travels</span></a>
+            <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">☰</button>
+            <ul id="primary-menu" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__overlay"></div>
+            <div class="hero__content container">
+                <h1 class="hero__title">Get in Touch</h1>
+                <p class="hero__tagline">We'd love to help plan your next trip.</p>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 48px 0;">
+            <div class="cards" style="grid-template-columns: 2fr 1fr;">
+                <section class="card">
+                    <div class="card__body">
+                        <h3>Contact Form</h3>
+                        <form class="contact-form">
+                            <div class="grid-2">
+                                <label> Name
+                                    <input type="text" name="name" placeholder="Your full name" required>
+                                </label>
+                                <label> Email
+                                    <input type="email" name="email" placeholder="you@example.com" required>
+                                </label>
+                            </div>
+                            <div class="grid-2">
+                                <fieldset class="fieldset">
+                                    <legend>Gender</legend>
+                                    <label class="inline"><input type="radio" name="gender" value="female"> Female</label>
+                                    <label class="inline"><input type="radio" name="gender" value="male"> Male</label>
+                                    <label class="inline"><input type="radio" name="gender" value="other"> Other</label>
+                                </fieldset>
+                                <label> Country
+                                    <select name="country" required>
+                                        <option value="">Select country</option>
+                                        <option>United States</option>
+                                        <option>United Kingdom</option>
+                                        <option>India</option>
+                                        <option>Japan</option>
+                                        <option>Australia</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <label> Message
+                                <textarea name="message" rows="5" placeholder="How can we help?"></textarea>
+                            </label>
+                            <button type="submit" class="btn btn-primary" aria-disabled="true">Send Message</button>
+                            <p style="color: var(--muted); margin: 8px 0 0; font-size: .9rem;">Note: Demo form — submission not configured.</p>
+                        </form>
+                    </div>
+                </section>
+                <aside class="card">
+                    <div class="card__body">
+                        <h3>Contact Details</h3>
+                        <ul class="contact-list">
+                            <li><span class="icon">✉️</span> Email: <a href="mailto:hello@wanderly.com">hello@wanderly.com</a></li>
+                            <li><span class="icon">📞</span> Phone: <a href="tel:+1234567890">+1 234 567 890</a></li>
+                        </ul>
+                        <h3 style="margin-top: 14px;">Follow Us</h3>
+                        <div class="socials">
+                            <a href="#">📷</a>
+                            <a href="#">📘</a>
+                            <a href="#">💼</a>
+                            <a href="#">🐦</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer__grid">
+            <p>© <span id="year"></span> Wanderly Travels</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        const y = document.getElementById('year');
+        if (y) { y.textContent = new Date().getFullYear(); }
+        const toggle = document.querySelector('.nav-toggle');
+        const menu = document.getElementById('primary-menu');
+        if (toggle && menu) {
+            toggle.addEventListener('click', () => {
+                const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', String(!expanded));
+                menu.classList.toggle('open');
+            });
+        }
+    </script>
+    
+</body>
+</html>
