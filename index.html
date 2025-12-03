@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderly Travels</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Explore the world's best destinations with Wanderly Travels.">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav container">
+            <a class="logo" href="index.html">Wanderly<span>Travels</span></a>
+            <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">☰</button>
+            <ul id="primary-menu" class="nav-links">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" src="assets/images/hero.jpg" alt="Mountain landscape">
+            <div class="hero__overlay"></div>
+            <div class="hero__content container">
+                <h1 class="hero__title">Find Your Next Adventure</h1>
+                <p class="hero__tagline">Curated trips, unforgettable memories.</p>
+                <a class="btn btn-primary" href="#featured">Explore Destinations</a>
+            </div>
+        </section>
+
+        <section id="featured" class="featured container">
+            <div class="section-head">
+                <h2>Featured Destinations</h2>
+                <p>Hand-picked places to inspire your next journey.</p>
+            </div>
+
+            <div class="cards">
+                <article class="card">
+                    <div class="card__media">
+                        <img style="width:100%;height:180px;object-fit:cover;display:block;" src="assets/images/card-1.jpg" alt="Destination one">
+                    </div>
+                    <div class="card__body">
+                        <h3>Bali, Indonesia</h3>
+                        <p>Golden beaches, lush rice terraces, and vibrant culture await.</p>
+                        <a class="btn btn-outline" href="about.html">Learn more</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card__media card__media--alps">
+                        <img style="width:100%;height:180px;object-fit:cover;display:block;" src="assets/images/card-2.jpg" alt="Destination two">
+                    </div>
+                    <div class="card__body">
+                        <h3>Swiss Alps</h3>
+                        <p>Snow-capped peaks, crystal lakes, and picturesque villages.</p>
+                        <a class="btn btn-outline" href="about.html">Learn more</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card__media card__media--kyoto">
+                        <img style="width:100%;height:180px;object-fit:cover;display:block;" src="assets/images/card-3.jpg" alt="Destination three">
+                    </div>
+                    <div class="card__body">
+                        <h3>Kyoto, Japan</h3>
+                        <p>Timeless temples, tranquil gardens, and spring blossoms.</p>
+                        <a class="btn btn-outline" href="about.html">Learn more</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="metrics container">
+            <div class="metric">
+                <div class="metric__num">95%</div>
+                <div class="metric__label">Happy Travelers</div>
+            </div>
+            <div class="metric">
+                <div class="metric__num">72+</div>
+                <div class="metric__label">Curated Routes</div>
+            </div>
+            <div class="metric">
+                <div class="metric__num">250+</div>
+                <div class="metric__label">Partner Guides</div>
+            </div>
+        </section>
+
+        <section class="feature-split container">
+            <div class="split__grid">
+                <div class="split__media">
+                    <img style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px;" src="assets/images/split.jpg" alt="Explorer looking over valley">
+                </div>
+                <div class="split__copy">
+                    <h2>Tailored journeys through the wild and wonderful</h2>
+                    <p>From glacier lagoons to mossy canyons, we stitch together routes that balance breathtaking scenery with time to slow down and soak it all in.</p>
+                    <a class="btn btn-primary" href="about.html">Our Story</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery container">
+            <div class="gallery__grid">
+                <figure class="gallery__item gallery__item--wide">
+                    <img style="width:100%;height:100%;object-fit:cover;display:block;" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Icelandic landscape">
+                    <figcaption>Glacial lagoons</figcaption>
+                </figure>
+                <figure class="gallery__item">
+                    <img style="width:100%;height:100%;object-fit:cover;display:block;" src="assets/images/Green-Valley.jpg" alt="Green valley">
+                    <figcaption>Emerald valleys</figcaption>
+                </figure>
+                <figure class="gallery__item">
+                    <img style="width:100%;height:100%;object-fit:cover;display:block;" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop" alt="Sea cliffs">
+                    <figcaption>Sea cliffs</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="cta">
+            <img style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" src="assets/images/cta.jpg" alt="Scenic landscape">
+            <div class="cta__overlay"></div>
+            <div class="container cta__content">
+                <h2>Find the perfect trip and discover extraordinary adventures</h2>
+                <a class="btn btn-primary" href="contact.html">Start Planning</a>
+            </div>
+        </section>
+
+        <section class="brand-banner">
+            <div class="brand__bg">
+                <img style="width:100%;height:100%;object-fit:cover;display:block;" src="assets/images/brand.jpg" alt="Mountain valley">
+            </div>
+            <div class="brand__text">SNAELAND</div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer__grid">
+            <p>© <span id="year"></span> Wanderly Travels</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        const y = document.getElementById('year');
+        if (y) { y.textContent = new Date().getFullYear(); }
+        const toggle = document.querySelector('.nav-toggle');
+        const menu = document.getElementById('primary-menu');
+        if (toggle && menu) {
+            toggle.addEventListener('click', () => {
+                const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', String(!expanded));
+                menu.classList.toggle('open');
+            });
+        }
+    </script>
+    
+</body>
+</html>
+
