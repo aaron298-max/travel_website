@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About • Wanderly Travels</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav container">
+            <a class="logo" href="index.html">Wanderly<span>Travels</span></a>
+            <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">☰</button>
+            <ul id="primary-menu" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero about-hero">
+            <div class="hero__overlay"></div>
+            <div class="hero__content container">
+                <h1 class="hero__title">About Wanderly</h1>
+                <p class="hero__tagline">We plan journeys that change perspectives.</p>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 48px 0;">
+            <article class="section-head" style="margin-bottom: 18px;">
+                <h2>Who We Are</h2>
+                <p>Wanderly is a travel guide and discovery site helping explorers find the right destination at the right time.</p>
+            </article>
+
+            <div class="cards" style="grid-template-columns: repeat(3, 1fr);">
+                <section class="card">
+                    <div class="card__body">
+                        <h3>Our Mission</h3>
+                        <p>Inspire meaningful travel through authentic stories and curated itineraries that respect local cultures and nature.</p>
+                    </div>
+                </section>
+                <section class="card">
+                    <div class="card__body">
+                        <h3>Our Vision</h3>
+                        <p>Enable anyone, anywhere to experience the world confidently and responsibly, one trip at a time.</p>
+                    </div>
+                </section>
+                <section class="card">
+                    <div class="card__body">
+                        <h3>Why Choose Us</h3>
+                        <p>We blend local insights with expert planning, offering balanced adventures with comfort and value.</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer__grid">
+            <p>© <span id="year"></span> Wanderly Travels</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        const y = document.getElementById('year');
+        if (y) { y.textContent = new Date().getFullYear(); }
+        const toggle = document.querySelector('.nav-toggle');
+        const menu = document.getElementById('primary-menu');
+        if (toggle && menu) {
+            toggle.addEventListener('click', () => {
+                const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', String(!expanded));
+                menu.classList.toggle('open');
+            });
+        }
+    </script>
+</body>
+</html>
